@@ -11,20 +11,20 @@ class Wikimd < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Darwin_arm64.tar.gz"
-      sha256 "PLACEHOLDER_ARM64_MACOS_CHECKSUM" # UPDATE THIS after creating release
+      sha256 "dd832269666a8011b01d3d360ed50f3a5fd9985d90e3d974a4506b0d66832d23"
     else
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "PLACEHOLDER_AMD64_MACOS_CHECKSUM" # UPDATE THIS after creating release
+      sha256 "fc1b96769e17153cb308fa7da38a3502a67fefac578f133b3caf9211319ca67a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Linux_arm64.tar.gz"
-      sha256 "PLACEHOLDER_ARM64_LINUX_CHECKSUM" # UPDATE THIS after creating release
+      sha256 "1dbfeb3c5aeab0cdbfd98dbc89a299b76ccbd03b35a8f5c2fa79fa3ff2d48f22"
     else
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Linux_x86_64.tar.gz"
-      sha256 "PLACEHOLDER_AMD64_LINUX_CHECKSUM" # UPDATE THIS after creating release
+      sha256 "35451c4d61b5ad5df2f1c16a6f97de309535711bca806c3466637f489299fa66"
     end
   end
 

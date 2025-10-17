@@ -43,20 +43,4 @@ class Wikimd < Formula
     # Test basic functionality
     system "#{bin}/wikimd", "--help"
   end
-
-  def caveats
-    <<~EOS
-      wikimd has been installed!
-
-      Quick start:
-        # Start wiki server in current directory
-        wikimd
-
-        # Start wiki with specific directory
-        wikimd --root ~/my-wiki
-
-      For more options, run:
-        wikimd --help
-    EOS
-  end
 end

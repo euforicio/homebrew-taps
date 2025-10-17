@@ -28,10 +28,10 @@ class Wikimd < Formula
     end
   end
 
-  # Optional dependencies
+  # Dependencies
+  depends_on "ripgrep" # Required for search functionality
   uses_from_macos "curl"
 
-  # Recommend ripgrep for enhanced search functionality
   def install
     bin.install "wikimd"
   end
@@ -47,9 +47,6 @@ class Wikimd < Formula
   def caveats
     <<~EOS
       wikimd has been installed!
-
-      For enhanced search functionality, install ripgrep:
-        brew install ripgrep
 
       Quick start:
         # Start wiki server in current directory

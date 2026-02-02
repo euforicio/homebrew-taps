@@ -1,7 +1,7 @@
 class Wikimd < Formula
   desc "Local-first Markdown wiki with live file watching and elegant UI"
   homepage "https://github.com/euforicio/wikimd"
-  version "0.2.3" # UPDATE THIS with each release
+  version "0.2.4" # UPDATE THIS with each release
   license "MIT"
 
   depends_on "ripgrep"
@@ -13,17 +13,17 @@ class Wikimd < Formula
       sha256 "3a22aeda3c4545fd3972a39a3977650021015e9bb8f491738778ecac47e5c667"
     else
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "14f32d632abe2f8f7f5007913d8dea8da70c69033e6f3720eb2961646987d3ac"
+      sha256 "d539a4a76373212987e1e418e0c090dc2975d605811f96f78c80862450131cd9"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Linux_arm64.tar.gz"
-      sha256 "760f904252bcf813e7009a32d40f252683bd31a55540b7e4fb83f9c2aa103a51"
+      sha256 "d8b367350bb925ced09d189f21c1c8cda19dca250c2906b3aafb9e4d3ccf165c"
     else
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Linux_x86_64.tar.gz"
-      sha256 "4627747598b215f93385f1499a357181a21d4a6a87cb67077ae4938e551ea0ae"
+      sha256 "57c92e7bbb304014cb6556a580266ec9d57e8e6311b67f7eb9d33973467f4752"
     end
   end
 

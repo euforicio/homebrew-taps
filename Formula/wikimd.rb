@@ -10,7 +10,7 @@ class Wikimd < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Darwin_arm64.tar.gz"
-      sha256 "3a22aeda3c4545fd3972a39a3977650021015e9bb8f491738778ecac47e5c667"
+      sha256 "cf8f777b8a4fb5aa62e2c09431be72e03f0a775ccd71c1066c9ca58b882a8373"
     else
       url "https://github.com/euforicio/wikimd/releases/download/v#{version}/wikimd_#{version}_Darwin_x86_64.tar.gz"
       sha256 "d539a4a76373212987e1e418e0c090dc2975d605811f96f78c80862450131cd9"

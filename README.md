@@ -31,6 +31,25 @@ For enhanced search functionality, install ripgrep:
 brew install ripgrep
 ```
 
+## Available Casks
+
+### scratchpad
+
+Simple, native macOS scratchpad and clipboard manager.
+
+```bash
+brew install --cask scratchpad
+```
+
+This is available via this tap:
+
+```bash
+brew tap euforicio/taps
+brew install --cask euforicio/taps/scratchpad
+```
+
+**Repository:** [euforicio/scratchpad](https://github.com/euforicio/scratchpad)
+
 ---
 
 ## Adding More Tools

@@ -7,25 +7,25 @@ class Dotlocal < Formula
     depends_on macos: :ventura
 
     on_arm do
-      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.2/dotlocal-0.1.2-macos-aarch64.tar.gz"
-      sha256 "e934f600190b482464d2ab62fcd1c1245883535d09068536dca62b51bb8bf5b3"
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.3/dotlocal-0.1.3-macos-aarch64.tar.gz"
+      sha256 "b13dd0d593c1ba1f638182a20c1141bed24c3d8b3c5fb886ef98ab06a4cbaab3"
     end
 
     on_intel do
-      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.2/dotlocal-0.1.2-macos-x86_64.tar.gz"
-      sha256 "12414389e7fd0dfc72bf057626c9c5765b8d604d574fe25b00a5114e8e029acc"
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.3/dotlocal-0.1.3-macos-x86_64.tar.gz"
+      sha256 "d725f5380b117894baede89e76bf389976788bdd8973e0fe86ef1030607dfc28"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.2/dotlocal-0.1.2-linux-aarch64.tar.gz"
-      sha256 "cf119c7b1a6b0c6b7f12c22b8c4d54ed63b68d130dc5232565b9786327024167"
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.3/dotlocal-0.1.3-linux-aarch64.tar.gz"
+      sha256 "4083687f61136fcfeb7b0f0f54a9ae11bf856b9d9279ab274db4e3777e9480f1"
     end
 
     on_intel do
-      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.2/dotlocal-0.1.2-linux-x86_64.tar.gz"
-      sha256 "f9bb15440e6603e95e5c6f9528c6a7307e425247abed42c3ca01841f34600e5b"
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.3/dotlocal-0.1.3-linux-x86_64.tar.gz"
+      sha256 "296a66d53e4f3bd55e08cbb5131641b0cad95ed0762fecdec4999a3bbadb1f54"
     end
   end
 

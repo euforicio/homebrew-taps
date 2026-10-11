@@ -21,6 +21,7 @@ printf 'Brew install/upgrade: %s -> %s\n' "$before" "$after"
 bin="$(brew --prefix dotlocal)/bin/dotlocal"
 bundle="$(brew --prefix dotlocal)/libexec/dotlocal"
 test_home=$(mktemp -d /tmp/dlb.XXXXXX)
+test_home=$(cd "$test_home" && pwd -P)
 trap 'rm -rf "$test_home"' EXIT
 export HOME="$test_home"
 version=$(sed -n 's|.*releases/download/v\([0-9.]*\)/.*|\1|p' "$candidate" | head -n 1)

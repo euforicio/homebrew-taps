@@ -27,7 +27,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
 
 with tempfile.TemporaryDirectory(prefix="dlr-", dir="/tmp") as directory:
-    state = pathlib.Path(directory)
+    state = pathlib.Path(directory).resolve()
     env = {key: value for key, value in os.environ.items() if not key.startswith("DOTLOCAL_")}
     env.update(DOTLOCAL_STATE_DIR=str(state), DOTLOCAL_SOCKET=str(state / "management.sock"), DOTLOCAL_AUTO_UPDATE="0")
     upstream = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)

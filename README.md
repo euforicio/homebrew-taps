@@ -10,6 +10,35 @@ brew tap euforicio/taps
 
 ## Available Formulas
 
+### dotlocal
+
+Local HTTPS routing for any server runtime on macOS and Linux (ARM64 and x86_64).
+
+```sh
+brew install euforicio/taps/dotlocal
+# Explicit macOS privileged listeners and certificate trust:
+dotlocal init
+```
+
+Both the CLI and daemon retain signed automatic updates. Brew owns the launcher
+and bundled binary; signed CLI updates replace `~/.dotlocal/bin/dotlocal`.
+A newer Brew bundle advances that runtime unless a version is pinned or the nightly channel is selected. An older
+bundle cannot downgrade a newer runtime. `brew info dotlocal` shows the package
+version; `dotlocal version` shows the running version.
+
+The hourly Actions workflow authenticates dotlocal's stable channel with its
+pinned Ed25519 public key, checks all four release archive hashes, and tests real
+Brew installation, upgrade, signed rollback/update and strict HTTPS/HTTP2 on
+macOS/Linux ARM64/x86_64 before committing a formula change. Nightlies never
+update the formula. Unchanged channels produce no commit. The workflow uses the
+tap's own Actions token and needs no cross-repository credential.
+
+`brew uninstall dotlocal` removes the launcher and bundle. User state and an
+explicitly installed macOS daemon remain. Remove that service first with
+`sudo dotlocal uninstall` if desired; formula operations never install a root service.
+
+**Repository:** [euforicio/dotlocal](https://github.com/euforicio/dotlocal)
+
 ### wikimd
 
 Local-first Markdown wiki with live file watching and elegant UI.

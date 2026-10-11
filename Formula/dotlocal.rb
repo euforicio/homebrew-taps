@@ -1,0 +1,40 @@
+class Dotlocal < Formula
+  desc "Local HTTPS routing for any server runtime"
+  homepage "https://github.com/euforicio/dotlocal"
+  license "MIT"
+
+  on_macos do
+    depends_on macos: :ventura
+
+    on_arm do
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.1/dotlocal-0.1.1-macos-aarch64.tar.gz"
+      sha256 "f846e3688621df5d493e4c1028c8b3eef05c6d33c6d14eb3fa1ba19a9d6c45b8"
+    end
+
+    on_intel do
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.1/dotlocal-0.1.1-macos-x86_64.tar.gz"
+      sha256 "8f628cf4b39fcf157aeaf6faf61494f09e571276a18e2bb22b18953ab02a0c48"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.1/dotlocal-0.1.1-linux-aarch64.tar.gz"
+      sha256 "02b0971f360690104c22af6cba559006c6e45b3e454471f42e01d3d8be999c96"
+    end
+
+    on_intel do
+      url "https://github.com/euforicio/dotlocal/releases/download/v0.1.1/dotlocal-0.1.1-linux-x86_64.tar.gz"
+      sha256 "48a6ea81053c2691ab64a08dcfd2807b5df00235953249e5ca45f478586df8ba"
+    end
+  end
+
+  def install
+    bin.install "dotlocal"
+  end
+
+  test do
+    assert_equal "#{version}\n", shell_output("#{bin}/dotlocal version")
+    system bin/"dotlocal", "--help"
+  end
+end

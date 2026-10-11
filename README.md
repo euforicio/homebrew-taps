@@ -20,7 +20,8 @@ brew install euforicio/taps/dotlocal
 dotlocal init
 ```
 
-Both the CLI and daemon retain signed automatic updates. Brew owns the launcher
+Starting with dotlocal 0.1.2, the CLI and daemon retain signed automatic updates.
+Brew owns the launcher
 and bundled binary; signed CLI updates replace `~/.dotlocal/bin/dotlocal`.
 A newer Brew bundle advances that runtime unless a version is pinned or the nightly channel is selected. An older
 bundle cannot downgrade a newer runtime. `brew info dotlocal` shows the package
